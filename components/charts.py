@@ -32,7 +32,7 @@ RECENCY_LABELS = ["0–30 d", "31–90 d", "91–180 d", "181–270 d", "271–3
 def render(fig: go.Figure, height: int = 380, key: str | None = None) -> None:
     """Theme + display a figure inside a rounded glass card."""
     theme.apply_chart_theme(fig, height=height)
-    st.plotly_chart(fig, use_container_width=True, config=theme.CHART_CONFIG, key=key)
+    st.plotly_chart(fig, width="stretch", config=theme.CHART_CONFIG, key=key)
 
 
 # --------------------------------------------------------------------------- #
